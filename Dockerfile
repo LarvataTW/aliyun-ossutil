@@ -12,4 +12,3 @@ RUN apk add --no-cache curl git && \
 FROM alpine:3.12
 ENV OSSUTIL_VERSION 1.7.7
 COPY --from=build /ossutil-${OSSUTIL_VERSION} /usr/local/bin/ossutil
-ENTRYPOINT ["/usr/local/bin/ossutil"]
